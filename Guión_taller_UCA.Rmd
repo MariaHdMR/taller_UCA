@@ -1,6 +1,6 @@
 ---
 title: "Talle_UCA_"
-author: "Sergio Pico y María Hurtado"
+author: "Sergio Picó y María Hurtado"
 affilations: "Universidad de Cádiz"
 date: "8/11/2021"
 
