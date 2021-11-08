@@ -16,7 +16,6 @@ output:
 ##1.¿Qué es Git? ¿Para qué?
 Es un sistema de control de versión pensado para desarrollo de software. Maneja la evolución de un conjunto de archivos (repositorio). Evita esto, en su versión código/datos (aunque también se puede usar para escribir nuestros papers/tesis).
 
-!["FINAL.doc"](images/FINALdoc.png)\
 En nuestro caso (data science), además del código tenemos que manejar datos, figuras, textos…
 Un solo usuario en un solo ordenador ya se beneficia de usar un sistema de control de versión, pero es necesario si:
 - Usas varios ordenadores
