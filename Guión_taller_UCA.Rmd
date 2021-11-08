@@ -1,0 +1,96 @@
+---
+title: "Talle_UCA_"
+author: "Sergio Pico y María Hurtado"
+affilations: "Universidad de Cádiz"
+date: "8/11/2021"
+
+output: 
+    distill::distill_article:
+        highlight: kate
+        code_folding: false  
+        toc: true     
+        toc_depth: 3
+        css: styles.css     
+---
+        
+##1.¿Qué es Git? ¿Para qué?
+Es un sistema de control de versión pensado para desarrollo de software. Maneja la evolución de un conjunto de archivos (repositorio). Evita esto, en su versión código/datos (aunque también se puede usar para escribir nuestros papers/tesis).
+
+!["FINAL.doc"](images/FINALdoc.png)\
+En nuestro caso (data science), además del código tenemos que manejar datos, figuras, textos…
+Un solo usuario en un solo ordenador ya se beneficia de usar un sistema de control de versión, pero es necesario si:
+- Usas varios ordenadores
+- Colaboras con otras personas
+
+##2. ¿Qué es GitHub? ¿Por qué?
+Nos proporciona un servidor online donde almacenar nuestros proyectos que usan Git (de manera similar a los archivos que tenemos en Google Drive o Dropbox).
+¿Para qué sirve?
+- Como copia de seguridad
+- Para tener tus proyectos siempre disponibles allí donde estés
+- Para colaborar con otras personas
+- Para que tu trabajo sea visible
+- Ventajas vs Google Docs (al escribir): hay también copias físicas, claridad al editar y comentar
+
+##3. Registro e instalación
+Registrarse en GitHub.
+    - Elegir nombre de usuario. Elige un nombre relevante, con tu nombre, corto, que forme parte de tu marca profesional, que puedas usar durante toda tu carrera. Evita caracteres no habituales. Todo minúsculas y sin espacios.
+    - Usa un email propio, tu email profesional que vayas a conservar siempre. Luego puedes actualizar tu cuenta a “pro” usando el email de la UCA.
+Instalar Git
+    - Comprobar si tengo Git instalado y no me acuerdo. En la shell:
+		    which git
+    - Qué versión?
+		    git –-version
+		    
+En Windows, instalo Git Bash. Todo default, pero en “Adjusting your Path Environment” selecciono la opción “Git from the command line and also from 3rd-party software”.
+Si ya lo tengo instalado, lo puedo actualizar desde la consola:
+    git update-git-for-windows
+##4. Presentación a Git
+No tiene por qué ser el mismo de GitHub. Pero que sea informativo, porque identifica tus acciones en Git
+    git config --global user.name "username"
+DEBE ser el MISMO que en GitHub
+    git config --global user.email "email"
+Comprabamos que los datos están bien introduccidos en Git
+    git config --global --list
+##5. Credenciales: Token
+Identificación ante GitHub. Se necesita generar un Token, que es como generar un usuario y contraseña para usar GitHub. 
+https://github.com/settings/tokens
+##6. Conectarse a GitHub
+Lo primero vamos a crear un repositorio en GitHub con las siguientes caracteristicas: 
+- No template
+- Nombre aleatorio
+- Description: Testing Git/GitHub setup
+- Público
+- Seleccionar “Add a README file”
+- Licencias: opcional
+
+Y una vez creado lo clonamos a nuestro ordenador. Esto es como descargar lo que hemos creado. 
+    git clone url
+Comprobamos la carpeta donde estamos trabajando (comando: pwd), y cambiamos el directorio a la carpeta que queramos (comando: cd nombredelrepo). Podemos ver qué hay dentro del respositorio: 
+    ls
+Pero también podemos ver parte de un archivo: 
+    head README.md
+Para ver de dónde viene este archivo podemos hacer: 
+    git remote show origin
+##7. Cambios locales y cómo subir cambios a la nube.
+Hacemos un cambio local. Añade algo a README.md o hasta puedes crear un nuevo archivo, por ejemplo un .txt en el que escribas la lista de la compra. 
+una vez lo tengas hecho, haz: 
+	git status
+Así lo que estás viendo es qué cosas han cambiado en tu carpeta, git te va a avisar de que hay modificaciones, y qué quieres hacer, si borrarlas o continuar con tus cambios y guardarlos. Nosotros en este caso vamos a querer guardarlos. 
+git add nombredemiarchivo.txt
+con esto lo he subido a al área de preparación, le estoy diciendo a git que he actualizado un documento y que me gustaría conservarlo, pero hasta que no haga git commit no lo voy a poder guardar. Git commit sirve como para hacer un screenshot de la actualización que he hecho en el documento, por lo que debo asignarle una breve descripción de qué he modificado para acordarme en veces posteriores, y este comentario va a ir entre comillas.
+    git commit -m “he añadido bla bla bla”
+Con este paso ya se me ha guardado la actualización en el documento, pero no se me habrá subido a la nube. Para que se me suba a la nube necesito hacer un push. 
+    git push
+y ahí se suben todas mis actualizaciones. Podría haber tenido muchos commits de diferentes archivos, pero con git push subo todo lo que tenga en mi carpeta local a la nube. Corre! Chequealo desde tu cuenta online de GitHub. 
+Pero…¿y si queremos compartir este repositorio? ¡Muy fácil! Clonamos el repositorio de nuestros colegas en nuestro ordenador con: 
+    git clone urldesuarchivo
+Lo ubicamos en nuestro directorio, lo modificamos y lo subimos.
+¡MANOS A LA OBRA! Por parejas podéis probar a hacer esto. 
+Ahora que sabemos usar Git y lo entendemos, vamos a enlazarlo con Rstudio, que seguramente es una de las interfaces que utilizaréis más.  
+Abrir Rstudio, y a modo de comprobación, para ver que tenemos enlazo Git, tenemos que mirar en la pantalla donde en Rstudio aparece el “enviroment” tiene que haber una pestaña que se llame Git. Además, en la pantalla donde aparece la consola de Rstudio, hay una pestaña que se llama terminal. Ahí está la terminal de Rstudio, que funciona de la misma manera que la de Git, y para comprobar que está enlazado Git con Rstudio podemos hacer las comprobaciones del inicio (git config --global --list). 
+Con Rstudio hay más facilidades también, están los botones de la pestaña Git, aunque recomendamos usar la terminal. 
+Podemos clonar un repositorio directamente desde Rstudio, hay que irse a New project> version control> Git > copias el url y le pones el nombre que quieras a la carpeta, le das a create project, y listo! ya está. 
+
+##8. Cómo convertir proyectos ya existentes en proyectos Git/GitHub
+
+
