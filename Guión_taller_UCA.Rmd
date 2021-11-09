@@ -146,7 +146,7 @@ Una vez lo tengas hecho, ejecuta:
 	git status
 ```
 
-Así lo que estás viendo es qué cosas han cambiado en tu carpeta, git te va a avisar de que hay modificaciones, y qué quieres hacer, si borrarlas o continuar con tus cambios y guardarlos. Nosotros en este caso vamos a querer guardarlos.
+Lo que estás viendo es qué cosas han cambiado en tu carpeta, git te va a avisar de que hay modificaciones. Puedes elegir qué hacer, si borrarlas o continuar con tus cambios y guardarlos. Nosotros en este caso vamos a querer guardarlos.
 
 ```console
 git add nombredemiarchivo.txt
@@ -158,13 +158,13 @@ Con esto lo he subido al área de preparación, le estoy diciendo a git que he a
 git commit -m “he añadido bla bla bla”
 ```
 
-Con este paso ya se me ha guardado la actualización en el documento, pero no se me habrá subido a la nube. Para que se me suba a la nube necesito hacer un push.
+Con este paso ya hemos hecho control de versión en la copia local, pero no se ha actualizado en la nube. Para ello necesitamos hacer un push.
 
 ```console
     git push
 ```
 
-Y ahí se suben todas mis actualizaciones. Podría haber tenido muchos commits de diferentes archivos, pero con git push subo todo lo que tenga en mi carpeta local a la nube. Corre! Chequéalo desde tu cuenta online de GitHub.
+Y ahí se suben todas mis actualizaciones añadidas en los commits. Podría haber tenido muchos commits de diferentes archivos, pero con git push subo todo lo que tenga en mi carpeta local a la nube. Corre! Chequéalo desde tu cuenta online de GitHub.
 
 Pero…¿y si queremos compartir este repositorio? ¡Muy fácil! Clonamos el repositorio de nuestros colegas en nuestro ordenador con:
 
@@ -175,8 +175,26 @@ Lo ubicamos en nuestro directorio, lo modificamos y lo subimos. ¡MANOS A LA OBR
 
 Ahora que sabemos usar Git y lo entendemos, vamos a enlazarlo con Rstudio, que seguramente es una de las interfaces que utilizaréis más. Abrid Rstudio, y a modo de comprobación, para ver que tenemos enlazado Git, tenemos que mirar en la pantalla donde en Rstudio aparece el “enviroment”. Debería aparecer una pestaña que se llame Git. Además, en la pantalla donde aparece la consola de Rstudio, hay una pestaña que se llama terminal. Ahí está la terminal de Git, dentro de RStudio, y para comprobar que está enlazado Git con Rstudio podemos hacer las comprobaciones del inicio (git config --global --list). 
 
-Con Rstudio hay más facilidades también, están los botones de la pestaña Git, aunque recomendamos usar la terminal. Podemos clonar un repositorio directamente desde Rstudio, hay que irse a New project> version control> Git > copias el url y le pones el nombre que quieras a la carpeta, le das a create project, y listo! ya está. 
+Con Rstudio hay más facilidades también, están los botones de la pestaña Git, aunque recomendamos usar la terminal. Podemos clonar un repositorio directamente desde Rstudio, hay que irse a New project> version control> Git > copias el url y le pones el nombre que quieras a la carpeta, le das a create project, y listo! Ya está. 
 
 ## 8. Cómo convertir proyectos ya existentes en proyectos Git/GitHub
 
+El método fácil:
 
+- Prepara tu proyecto de RStudio en una carpeta (organizado a ser posible).
+
+- Crea un nuevo repositorio en GitHub.
+
+- Selecciona la opción "Clone" y copia la URL.
+
+- En RStudio, Nuevo Proyecto - Version Control - Git. En realidad estamos haciendo esto:
+
+```console
+git clone URL
+```
+
+- Copiamos todos los archivos del proyecto a la nueva carpeta.
+
+- Commit + push (puede que no quieras subir algunos archivos, ej: rasters)
+
+- Comprueba que tu repositorio en GitHub se ha actualizado.
