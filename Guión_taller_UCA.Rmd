@@ -152,7 +152,7 @@ Así lo que estás viendo es qué cosas han cambiado en tu carpeta, git te va a 
 git add nombredemiarchivo.txt
 ```
 
-con esto lo he subido al área de preparación, le estoy diciendo a git que he actualizado un documento y que me gustaría conservarlo, pero hasta que no haga git commit no lo voy a poder guardar. Git commit actúa como un screenshot de la actualización que he hecho en el documento, por lo que debo asignarle una breve descripción de qué he modificado para acordarme posteriormente. Este comentario va a ir entre comillas.
+Con esto lo he subido al área de preparación, le estoy diciendo a git que he actualizado un documento y que me gustaría conservarlo, pero hasta que no haga git commit no lo voy a poder guardar. Git commit actúa como un screenshot de la actualización que he hecho en el documento, por lo que debo asignarle una breve descripción de qué he modificado para acordarme posteriormente. Este comentario va a ir entre comillas.
 
 ```console
 git commit -m “he añadido bla bla bla”

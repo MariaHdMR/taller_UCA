@@ -182,8 +182,8 @@ Seguro que es la última versión?
 </div>
 <p>Un solo usuario en un solo ordenador ya se beneficia de usar un sistema de control de versión, pero es necesario si:</p>
 <ul>
-<li>Usas varios ordenadores</li>
-<li>Colaboras con otras personas</li>
+<li><p>Usas varios ordenadores</p></li>
+<li><p>Colaboras con otras personas</p></li>
 </ul>
 </div>
 <div id="qué-es-github-por-qué" class="section level2">
@@ -191,11 +191,11 @@ Seguro que es la última versión?
 <p>Nos proporciona un servidor online donde almacenar nuestros proyectos que usan Git (de manera similar a los archivos que tenemos en Google Drive o Dropbox).</p>
 <p>¿Para qué sirve?</p>
 <ul>
-<li>Como copia de seguridad</li>
-<li>Para tener tus proyectos siempre disponibles allí donde estés</li>
-<li>Para colaborar con otras personas</li>
-<li>Para que tu trabajo sea visible</li>
-<li>Ventajas vs Google Docs (al escribir): hay también copias físicas, claridad al editar y comentar</li>
+<li><p>Como copia de seguridad</p></li>
+<li><p>Para tener tus proyectos siempre disponibles allí donde estés</p></li>
+<li><p>Para colaborar con otras personas</p></li>
+<li><p>Para que tu trabajo sea visible</p></li>
+<li><p>Ventajas vs Google Docs (al escribir): hay también copias físicas, claridad al editar y comentar</p></li>
 </ul>
 </div>
 <div id="registro-e-instalación" class="section level2">
@@ -231,12 +231,12 @@ Seguro que es la última versión?
 <h1>6. Conectarse a GitHub</h1>
 <p>Primero creamos un repositorio en GitHub con las siguientes caracteristicas:</p>
 <ul>
-<li>No template</li>
-<li>Nombre que queramos</li>
-<li>Description: Testing Git/GitHub setup</li>
-<li>Público</li>
-<li>Seleccionar “Add a README file”</li>
-<li>Licencias: opcional</li>
+<li><p>No template</p></li>
+<li><p>Nombre que queramos</p></li>
+<li><p>Description: Testing Git/GitHub setup</p></li>
+<li><p>Público</p></li>
+<li><p>Seleccionar “Add a README file”</p></li>
+<li><p>Licencias: opcional</p></li>
 </ul>
 <p>Y una vez creado lo clonamos a nuestro ordenador. Esto es como descargar lo que hemos creado.</p>
 <pre class="console"><code>git clone url</code></pre>
@@ -252,9 +252,21 @@ Seguro que es la última versión?
 <p>Hacemos un cambio local. Añade algo a README.md o hasta puedes crear un nuevo archivo, por ejemplo un .txt en el que escribas la lista de la compra.</p>
 <p>Una vez lo tengas hecho, ejecuta:</p>
 <pre class="console"><code>    git status</code></pre>
-<p>Así lo que estás viendo es qué cosas han cambiado en tu carpeta, git te va a avisar de que hay modificaciones, y qué quieres hacer, si borrarlas o continuar con tus cambios y guardarlos. Nosotros en este caso vamos a querer guardarlos. git add nombredemiarchivo.txt con esto lo he subido a al área de preparación, le estoy diciendo a git que he actualizado un documento y que me gustaría conservarlo, pero hasta que no haga git commit no lo voy a poder guardar. Git commit sirve como para hacer un screenshot de la actualización que he hecho en el documento, por lo que debo asignarle una breve descripción de qué he modificado para acordarme en veces posteriores, y este comentario va a ir entre comillas. git commit -m “he añadido bla bla bla” Con este paso ya se me ha guardado la actualización en el documento, pero no se me habrá subido a la nube. Para que se me suba a la nube necesito hacer un push. git push y ahí se suben todas mis actualizaciones. Podría haber tenido muchos commits de diferentes archivos, pero con git push subo todo lo que tenga en mi carpeta local a la nube. Corre! Chequealo desde tu cuenta online de GitHub. Pero…¿y si queremos compartir este repositorio? ¡Muy fácil! Clonamos el repositorio de nuestros colegas en nuestro ordenador con: git clone urldesuarchivo Lo ubicamos en nuestro directorio, lo modificamos y lo subimos. ¡MANOS A LA OBRA! Por parejas podéis probar a hacer esto. Ahora que sabemos usar Git y lo entendemos, vamos a enlazarlo con Rstudio, que seguramente es una de las interfaces que utilizaréis más.<br />
-Abrir Rstudio, y a modo de comprobación, para ver que tenemos enlazo Git, tenemos que mirar en la pantalla donde en Rstudio aparece el “enviroment” tiene que haber una pestaña que se llame Git. Además, en la pantalla donde aparece la consola de Rstudio, hay una pestaña que se llama terminal. Ahí está la terminal de Rstudio, que funciona de la misma manera que la de Git, y para comprobar que está enlazado Git con Rstudio podemos hacer las comprobaciones del inicio (git config –global –list). Con Rstudio hay más facilidades también, están los botones de la pestaña Git, aunque recomendamos usar la terminal. Podemos clonar un repositorio directamente desde Rstudio, hay que irse a New project&gt; version control&gt; Git &gt; copias el url y le pones el nombre que quieras a la carpeta, le das a create project, y listo! ya está.</p>
-<p>##8. Cómo convertir proyectos ya existentes en proyectos Git/GitHub</p>
+<p>Así lo que estás viendo es qué cosas han cambiado en tu carpeta, git te va a avisar de que hay modificaciones, y qué quieres hacer, si borrarlas o continuar con tus cambios y guardarlos. Nosotros en este caso vamos a querer guardarlos.</p>
+<pre class="console"><code>git add nombredemiarchivo.txt</code></pre>
+<p>Con esto lo he subido al área de preparación, le estoy diciendo a git que he actualizado un documento y que me gustaría conservarlo, pero hasta que no haga git commit no lo voy a poder guardar. Git commit actúa como un screenshot de la actualización que he hecho en el documento, por lo que debo asignarle una breve descripción de qué he modificado para acordarme posteriormente. Este comentario va a ir entre comillas.</p>
+<pre class="console"><code>git commit -m “he añadido bla bla bla”</code></pre>
+<p>Con este paso ya se me ha guardado la actualización en el documento, pero no se me habrá subido a la nube. Para que se me suba a la nube necesito hacer un push.</p>
+<pre class="console"><code>    git push</code></pre>
+<p>Y ahí se suben todas mis actualizaciones. Podría haber tenido muchos commits de diferentes archivos, pero con git push subo todo lo que tenga en mi carpeta local a la nube. Corre! Chequéalo desde tu cuenta online de GitHub.</p>
+<p>Pero…¿y si queremos compartir este repositorio? ¡Muy fácil! Clonamos el repositorio de nuestros colegas en nuestro ordenador con:</p>
+<pre class="console"><code>git clone url_del_repo</code></pre>
+<p>Lo ubicamos en nuestro directorio, lo modificamos y lo subimos. ¡MANOS A LA OBRA! Por parejas podéis probar a hacer esto.</p>
+<p>Ahora que sabemos usar Git y lo entendemos, vamos a enlazarlo con Rstudio, que seguramente es una de las interfaces que utilizaréis más. Abrid Rstudio, y a modo de comprobación, para ver que tenemos enlazado Git, tenemos que mirar en la pantalla donde en Rstudio aparece el “enviroment”. Debería aparecer una pestaña que se llame Git. Además, en la pantalla donde aparece la consola de Rstudio, hay una pestaña que se llama terminal. Ahí está la terminal de Git, dentro de RStudio, y para comprobar que está enlazado Git con Rstudio podemos hacer las comprobaciones del inicio (git config –global –list).</p>
+<p>Con Rstudio hay más facilidades también, están los botones de la pestaña Git, aunque recomendamos usar la terminal. Podemos clonar un repositorio directamente desde Rstudio, hay que irse a New project&gt; version control&gt; Git &gt; copias el url y le pones el nombre que quieras a la carpeta, le das a create project, y listo! ya está.</p>
+<div id="cómo-convertir-proyectos-ya-existentes-en-proyectos-gitgithub" class="section level2">
+<h2>8. Cómo convertir proyectos ya existentes en proyectos Git/GitHub</h2>
+</div>
 </div>
 
 
