@@ -252,20 +252,33 @@ Seguro que es la última versión?
 <p>Hacemos un cambio local. Añade algo a README.md o hasta puedes crear un nuevo archivo, por ejemplo un .txt en el que escribas la lista de la compra.</p>
 <p>Una vez lo tengas hecho, ejecuta:</p>
 <pre class="console"><code>    git status</code></pre>
-<p>Así lo que estás viendo es qué cosas han cambiado en tu carpeta, git te va a avisar de que hay modificaciones, y qué quieres hacer, si borrarlas o continuar con tus cambios y guardarlos. Nosotros en este caso vamos a querer guardarlos.</p>
+<p>Lo que estás viendo es qué cosas han cambiado en tu carpeta, git te va a avisar de que hay modificaciones. Puedes elegir qué hacer, si borrarlas o continuar con tus cambios y guardarlos. Nosotros en este caso vamos a querer guardarlos.</p>
 <pre class="console"><code>git add nombredemiarchivo.txt</code></pre>
 <p>Con esto lo he subido al área de preparación, le estoy diciendo a git que he actualizado un documento y que me gustaría conservarlo, pero hasta que no haga git commit no lo voy a poder guardar. Git commit actúa como un screenshot de la actualización que he hecho en el documento, por lo que debo asignarle una breve descripción de qué he modificado para acordarme posteriormente. Este comentario va a ir entre comillas.</p>
 <pre class="console"><code>git commit -m “he añadido bla bla bla”</code></pre>
-<p>Con este paso ya se me ha guardado la actualización en el documento, pero no se me habrá subido a la nube. Para que se me suba a la nube necesito hacer un push.</p>
+<p>Con este paso ya hemos hecho control de versión en la copia local, pero no se ha actualizado en la nube. Para ello necesitamos hacer un push.</p>
 <pre class="console"><code>    git push</code></pre>
-<p>Y ahí se suben todas mis actualizaciones. Podría haber tenido muchos commits de diferentes archivos, pero con git push subo todo lo que tenga en mi carpeta local a la nube. Corre! Chequéalo desde tu cuenta online de GitHub.</p>
+<p>Y ahí se suben todas mis actualizaciones añadidas en los commits. Podría haber tenido muchos commits de diferentes archivos, pero con git push subo todo lo que tenga en mi carpeta local a la nube. Corre! Chequéalo desde tu cuenta online de GitHub.</p>
 <p>Pero…¿y si queremos compartir este repositorio? ¡Muy fácil! Clonamos el repositorio de nuestros colegas en nuestro ordenador con:</p>
 <pre class="console"><code>git clone url_del_repo</code></pre>
 <p>Lo ubicamos en nuestro directorio, lo modificamos y lo subimos. ¡MANOS A LA OBRA! Por parejas podéis probar a hacer esto.</p>
 <p>Ahora que sabemos usar Git y lo entendemos, vamos a enlazarlo con Rstudio, que seguramente es una de las interfaces que utilizaréis más. Abrid Rstudio, y a modo de comprobación, para ver que tenemos enlazado Git, tenemos que mirar en la pantalla donde en Rstudio aparece el “enviroment”. Debería aparecer una pestaña que se llame Git. Además, en la pantalla donde aparece la consola de Rstudio, hay una pestaña que se llama terminal. Ahí está la terminal de Git, dentro de RStudio, y para comprobar que está enlazado Git con Rstudio podemos hacer las comprobaciones del inicio (git config –global –list).</p>
-<p>Con Rstudio hay más facilidades también, están los botones de la pestaña Git, aunque recomendamos usar la terminal. Podemos clonar un repositorio directamente desde Rstudio, hay que irse a New project&gt; version control&gt; Git &gt; copias el url y le pones el nombre que quieras a la carpeta, le das a create project, y listo! ya está.</p>
+<p>Con Rstudio hay más facilidades también, están los botones de la pestaña Git, aunque recomendamos usar la terminal. Podemos clonar un repositorio directamente desde Rstudio, hay que irse a New project&gt; version control&gt; Git &gt; copias el url y le pones el nombre que quieras a la carpeta, le das a create project, y listo! Ya está.</p>
 <div id="cómo-convertir-proyectos-ya-existentes-en-proyectos-gitgithub" class="section level2">
 <h2>8. Cómo convertir proyectos ya existentes en proyectos Git/GitHub</h2>
+<p>El método fácil:</p>
+<ul>
+<li><p>Prepara tu proyecto de RStudio en una carpeta (organizado a ser posible).</p></li>
+<li><p>Crea un nuevo repositorio en GitHub.</p></li>
+<li><p>Selecciona la opción “Clone” y copia la URL.</p></li>
+<li><p>En RStudio, Nuevo Proyecto - Version Control - Git. En realidad estamos haciendo esto:</p></li>
+</ul>
+<pre class="console"><code>git clone URL</code></pre>
+<ul>
+<li><p>Copiamos todos los archivos del proyecto a la nueva carpeta.</p></li>
+<li><p>Commit + push (puede que no quieras subir algunos archivos, ej: rasters)</p></li>
+<li><p>Comprueba que tu repositorio en GitHub se ha actualizado.</p></li>
+</ul>
 </div>
 </div>
 
