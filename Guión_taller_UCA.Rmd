@@ -177,6 +177,28 @@ Ahora que sabemos usar Git y lo entendemos, vamos a enlazarlo con Rstudio, que s
 
 Con Rstudio hay más facilidades también, están los botones de la pestaña Git, aunque recomendamos usar la terminal. Podemos clonar un repositorio directamente desde Rstudio, hay que irse a New project> version control> Git > copias el url y le pones el nombre que quieras a la carpeta, le das a create project, y listo! Ya está. 
 
+Vamos a repetir el flujo de trabajo anterior en Git, pero ahora con Rstudio: 
+
+- Creamos un repositorio
+- Añadimos en Rstudio un nuevo repositorio dónde clonamos el respositorio de Git
+- Crea un txt o sube una foto de tu animal favorito y guardala en tu repositorio local 
+```console
+git add miperrobonito.png
+```
+- Haz un commit para conservar estos cambios que has añadido
+```console
+git commit -m "foto de mi perro en verano"
+```
+- chequeamos que Git ha registado los cambios que hemos hecho en la carpeta
+```console
+git status
+```
+- y lo subimos a la nube
+```console
+git push
+```
+
+
 ## 8. Cómo convertir proyectos ya existentes en proyectos Git/GitHub
 
 El método fácil:
